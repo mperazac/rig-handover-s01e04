@@ -13,7 +13,7 @@ type RunLine = {
 const STATUSES: readonly string[] = ['ok', 'retry', 'fail'];
 
 // Returns the parsed line, or null when it is not valid JSON or lacks job / status / at.
-function parseLine(text: string): RunLine | null {
+export function parseLine(text: string): RunLine | null {
   let value: unknown;
   try {
     value = JSON.parse(text);
